@@ -7,21 +7,18 @@ from .kanaconverter import to_hiragana, to_katakana, invert_hiragana_katakana
 
 class ConvertToHiraganaCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        sels = self.view.sel()
-        for select in sels:
-            s = self.view.substr(select)
-            self.view.replace(edit, select, to_hiragana(s))
+        for sel in self.view.sel():
+            text = self.view.substr(sel)
+            self.view.replace(edit, sel, to_hiragana(text))
 
 class ConvertToKatakanaCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        sels = self.view.sel()
-        for select in sels:
-            s = self.view.substr(select)
-            self.view.replace(edit, select, to_katakana(s))
+        for sel in self.view.sel():
+            text = self.view.substr(sel)
+            self.view.replace(edit, sel, to_katakana(text))
 
 class InvertHiraganaAndKatakanaCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        sels = self.view.sel()
-        for select in sels:
-            s = self.view.substr(select)
-            self.view.replace(edit, select, invert_hiragana_katakana(s))
+        for sel in self.view.sel():
+            text = self.view.substr(sel)
+            self.view.replace(edit, sel, invert_hiragana_katakana(text))

@@ -1,0 +1,14 @@
+[
+    {
+        "caption": "KanaKana: Convert to Hiragana",
+        "command": "convert_to_hiragana"
+    },
+    {
+        "caption": "KanaKana: Convert to Katakana",
+        "command": "convert_to_katakana"
+    },
+    {
+        "caption": "KanaKana: Invert Hiragana/Katakana",
+        "command": "invert_hiragana_and_katakana"
+    },
+]

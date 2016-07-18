@@ -1,6 +1,9 @@
 # KanaKana
 KanaKana is plugin of Hiragana/Katakana converter for Sublime Text 3.
 
+![Demo](demo_inverts.gif)
+
+
 ## Installation
 
 ```

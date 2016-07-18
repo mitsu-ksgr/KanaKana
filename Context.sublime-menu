@@ -1,0 +1,11 @@
+[
+    {
+        "id": "KanaKana",
+        "caption": "かな/カナ",
+        "children": [
+            {"caption": "Convert to かな", "command": "convert_to_hiragana"},
+            {"caption": "Convert to カナ", "command": "convert_to_katakana"},
+            {"caption": "Invert かな/カナ", "command": "invert_hiragana_and_katakana"}
+        ]
+    }
+]

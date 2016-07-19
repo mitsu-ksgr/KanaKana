@@ -3,22 +3,22 @@
 import sublime
 import sublime_plugin
 import sys
-from .kanaconverter import to_hiragana, to_katakana, invert_hiragana_katakana
+from . import kanaconverter
 
 class ConvertToHiraganaCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for sel in self.view.sel():
             text = self.view.substr(sel)
-            self.view.replace(edit, sel, to_hiragana(text))
+            self.view.replace(edit, sel, kanaconverter.to_hiragana(text))
 
 class ConvertToKatakanaCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for sel in self.view.sel():
             text = self.view.substr(sel)
-            self.view.replace(edit, sel, to_katakana(text))
+            self.view.replace(edit, sel, kanaconverter.to_katakana(text))
 
 class InvertHiraganaAndKatakanaCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for sel in self.view.sel():
             text = self.view.substr(sel)
-            self.view.replace(edit, sel, invert_hiragana_katakana(text))
+            self.view.replace(edit, sel, kanaconverter.invert_hiragana_katakana(text))
